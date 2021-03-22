@@ -5,11 +5,11 @@ import pandas as pd
 from os import path
 
 #Database Connection
-conn = ps2.connect(host = "dp-prod-redshift.cvsmnufhrlzh.ap-south-1.redshift.amazonaws.com", 
-                        port = 5439, 
-                        database = "skull", 
-                        user= "revanth_venkatasai_pharmeasy_in", 
-                        password = "leo0ieH1phah7o")
+conn = ps2.connect(host = host, 
+                        port = port, 
+                        database = database, 
+                        user= user, 
+                        password = pwd)
 
 def query_fetch(query,conn):
     df = pd.read_sql_query(query,conn)
