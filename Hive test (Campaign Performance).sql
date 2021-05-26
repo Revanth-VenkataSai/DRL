@@ -1,5 +1,6 @@
 -- Omez Campaign Performance
 -- Hive
+-- Changes: Check the Campaign names from MSTR dashboard and add the Campaigns
 set hive.groupby.orderby.position.alias=true ;
 select cm.campaign_id, cm.channel as campaign_type, cm.campaign_name, ns.dt as notification_sent_date, nc.dt as notification_clicked_date, cm.campaign_vertical,
 	count(distinct ns.profile_objectid) as reached_customers,
